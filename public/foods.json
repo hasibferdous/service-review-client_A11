@@ -1,0 +1,56 @@
+[
+    {
+
+        "service_id": "04",
+        "title": "Chicken Hyderabad Biryani",
+        "img": "https://img.freepik.com/free-photo/indian-chicken-biryani-served-terracotta-bowl-with-yogurt-white-background-selective-focus_466689-72554.jpg?w=740&t=st=1668011527~exp=1668012127~hmac=e1df1b8f6d0caaada6c68a15042302146b79f7e2961b34fa5a8fefc0d50336c3",
+        "price": "799",
+        "description": "Hyderabadi chicken biryani is an aromatic, mouth watering and authentic Indian dish with succulent chicken in layers of fluffy rice, fragrant spices and fried onions. It is easier than most recipes while retaining the original taste and presented step by step. Cook like a native but with more ease!. Biryani is a classic Indian mixed rice dish that is part of the Indian Mughlai culinary tradition, which traces its roots to central Asian cuisine and a rich fusion with Indian flavors and techniques. It is prepared with layers of fluffy basmati rice and exquisitely spiced meat or chicken."
+
+    },
+    {
+
+        "service_id": "05",
+        "title": "Crispy Fried Chicken",
+        "img": "https://img.freepik.com/free-photo/crispy-fried-chicken-plate-with-salad-carrot_1150-20212.jpg?w=740&t=st=1668012005~exp=1668012605~hmac=efd0b5a52a512ec6566ad8c5b32730c4b616d9b0159625264038ab72dea05ae7",
+        "price": "380",
+        "description": "When it comes to chicken there just isn’t anything more delicious than a juicy, crusty piece of finger-licking good fried chicken. "
+
+    },
+    {
+
+        "service_id": "01",
+        "title": "Chicken Cheese Burger",
+        "img": "https://img.freepik.com/free-photo/side-view-chicken-burger-deep-fired-chicken-fillet-with-tomato-cheese-lettuce-burger-buns_141793-4816.jpg?w=740&t=st=1668016039~exp=1668016639~hmac=3090f8ec8ff4f822644964a10cb4c565be0cdcc8db66614de220f27e11d9b3c2",
+        "price": "220.00",
+        "description": "Prepared with chicken patty which was tender and juicy, cooked with BBQ sauce which gives a smoky flavour and do justice to the name. The amount of sauce and spice level is perfect just the way customer wanted. The bun was super soft and fresh."
+
+    },
+    {
+
+        "service_id": "02",
+        "title": "Shrimp Fried Rice",
+        "img": "https://img.freepik.com/free-photo/american-shrimp-fried-rice-served-with-chili-fish-sauce-thai-food_1150-26576.jpg?w=740&t=st=1668016628~exp=1668017228~hmac=fdb86e9a8ebef59b4f3c8c592d9d0134be7affb1bad84b71d44c31197010eef3",
+        "price": "350.00",
+        "description": "Shrimp Fried Rice is one of my go-to 30-minute meals and my family can’t get enough of it. Shrimp and rice loaded with veggies and egg is a protein-packed and easy dinner. Fried Rice is the best way to use leftover Cooked Rice."
+
+    },
+    {
+
+        "service_id": "03",
+        "title": "Spicy Chicken Thai Soup",
+        "img": "https://img.freepik.com/free-photo/thai-food-spicy-chicken-tendon-soup_1150-45536.jpg?w=740&t=st=1668017659~exp=1668018259~hmac=98863537fe81f5db325267860ff1cb9a937ad55840c67ad38b2d8d27a9fa2198",
+        "price": "30.00",
+        "description": "This Thai-inspired soup is full of chunks of tender chicken and mushrooms, and is rich and spicy with the addition of coconut milk, red curry paste, ginger"
+
+    },
+    {
+
+        "service_id": "06",
+        "title": "Chicken Hakka Noodles",
+        "img": "https://img.freepik.com/free-photo/chicken-hakka-noodles-schezwan-szechwan-noodles-served-bowl-with-chopsticks-selective-focus_466689-74510.jpg?w=740&t=st=1668018075~exp=1668018675~hmac=5306f11e73b0b83f971ba3c6362a04bbf0556f529cf30a7ca34bc890b3c07e96",
+        "price": "20.00",
+        "description": "Noodles are one of the most beloved recipes in Indo-Chinese food. Here I bring you a delicious recipe of chicken hakka noodles you must try!.The chicken-hakka noodles, with schezuan sauce and mayonnaise dip is really very delicious. The light flavours of soy sauce, vinegar and spices tossed with some noodles and veggies are always comforting to have."
+
+    }
+]
