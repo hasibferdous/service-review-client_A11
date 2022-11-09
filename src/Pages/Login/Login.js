@@ -1,21 +1,16 @@
 import { GoogleAuthProvider} from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
-
 const Login = () => {
-
-    const {signIn, handleGithubSignIn} = useContext(AuthContext);
+    const {signIn} = useContext(AuthContext);
     const [showpass, setShowPass] = useState(false)
     const [error, SetError]= useState('')
     const navigate =useNavigate()
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     const {providerLogin} = useContext(AuthContext);
-
-    
     const googleProvider = new GoogleAuthProvider()
 
     const handleGoogleSignIn = () =>{
@@ -23,10 +18,8 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
-
         })
         .catch(error => console.error(error))
-
     }
 
     const handleSubmit = event => {
@@ -35,7 +28,6 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         //console.log(email, password);
-
         signIn(email, password)
         .then(result => {
             const user = result.user;
@@ -52,7 +44,7 @@ const Login = () => {
 
     return (
         <div>
-                    <>
+            <>
             <div className="bg-indigo-50">
                 <div className="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 2xl:mx-auto 2xl:container md:flex items-center justify-center">
 

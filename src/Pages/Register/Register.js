@@ -1,13 +1,10 @@
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
-
-
-   
-    const handleSignUp = event =>{
+        const handleSignUp = event =>{
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -36,11 +33,8 @@ const Register = () => {
       }
   
     const {createUser, updateUserProfile } = useContext(AuthContext);
-    
-    const [error, SetError]= useState('')
+    // const [error, SetError]= useState('')
     const {providerLogin} = useContext(AuthContext);
-
-   
     const googleProvider = new GoogleAuthProvider()
 
     const handleGoogleSignIn = () =>{
@@ -51,11 +45,11 @@ const Register = () => {
 
         })
         .catch(error => console.error(error))
-
     }
+
     return (
         <div>
- <div>
+        <div>
             <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
                 <div>
                     <a href="/">
@@ -64,7 +58,7 @@ const Register = () => {
                         </h3>
                     </a>
                 </div>
-                <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
+                <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-gray-300 shadow-md sm:max-w-lg sm:rounded-lg">
                     <form onSubmit={handleSignUp}>
                         <div>
                             <label
@@ -78,15 +72,16 @@ const Register = () => {
                                     type="text"
                                     name="name"
                                     className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                    required
                                 />
                             </div>
                         </div>
                         <div>
                             <label
-                                htmlFor="name"
+                                htmlFor="photoURL"
                                 className="block text-sm font-medium text-gray-700 undefined"
                             >
-                                Name
+                                Photo URL
                             </label>
                             <div className="flex flex-col items-start">
                                 <input
@@ -108,6 +103,7 @@ const Register = () => {
                                     type="email"
                                     name="email"
                                     className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                    required
                                 />
                             </div>
                         </div>
@@ -123,6 +119,7 @@ const Register = () => {
                                     type="password"
                                     name="password"
                                     className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                    required
                                 />
                             </div>
                         </div>
@@ -138,6 +135,7 @@ const Register = () => {
                                     type="password"
                                     name="password_confirmation"
                                     className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                    required
                                 />
                             </div>
                         </div>
@@ -174,7 +172,7 @@ const Register = () => {
                             onClick={handleGoogleSignIn}
                             aria-label="Login with Google"
                             type="button"
-                            className="flex items-center justify-center w-full p-2 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400"
+                            className=" bg-slate-100 flex items-center justify-center w-full p-2 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400 focus:ring-violet-400"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -185,11 +183,6 @@ const Register = () => {
                             </svg>
                             <p>Login with Google</p>
                         </button>
-
-
-
-
-
                     </div>
                 </div>
             </div>
