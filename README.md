@@ -1,3 +1,45 @@
+live website link:
+#Project Name: Hungry Kitchen 
+## Common features of the website:
+* Firebase authentication. 
+* Login and Registration process using Email & Password, Google.
+* Responsive design for mobile and desktop.
+* Food item cards containing food details and reviews.
+* Adding review and service option. 
+* Use of private route.
+* Blog Page containing QnA.
+
+## Technologies Used 
+* Client site: React JS, React Tailwind CSS, Tailwind UI kit,  React router dom, Firebase.
+* Server: Node, Express, MongoDB, Vercel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
