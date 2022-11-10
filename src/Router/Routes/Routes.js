@@ -1,7 +1,6 @@
 import { createBrowserRouter} from 'react-router-dom'
 import Main from '../../Layout/Main/Main';
 import Blogs from '../../Pages/Blogs/Blogs';
-import Checkout from '../../Pages/Checkout/Checkout';
 import AddService from '../../Pages/Home/AddService/AddService';
 import Home from '../../Pages/Home/Home/Home';
 import ServiceAll from '../../Pages/Home/Services/ServiceAll';
@@ -29,12 +28,12 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
             {
                 path: '/services/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://service-review-server-theta.vercel.app/services/${params.id}`)
             },
             {
                 path: '/reviews/:id',
                 element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://service-review-server-theta.vercel.app/reviews/${params.id}`)
             },
 
             {
@@ -57,20 +56,19 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
                 path: '/blog',
                 element: <Blogs></Blogs>
             },
-            //  {
-            //      path: '/checkout/:id',
-            //      element: <Checkout></Checkout>,
-            //      loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
-            //    },
                {
                  path: '/services',
                 element: <Services></Services>
                },
-            //    {
-            //     path: '/servicedetails/:id',
-            //     element: <ServiceDetails></ServiceDetails>,
-            //     loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
-            //    }
+               {
+                path: '/myreviews',
+                element: <MyReviews></MyReviews>
+              },
+              {
+                path:'*', 
+                element: <div className='m-5 p-5'><h1><b>404 Error !!! <p>This route is not found</p></b></h1></div>
+        }
+
           ]
 
         }

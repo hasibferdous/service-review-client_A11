@@ -17,7 +17,7 @@ const Header = () => {
             user?.email ? 
             <>
             <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/myorders'>My Orders</Link></li>
-            <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/myreviews'>My Reviews</Link></li>
+            <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/reviews/:id'>My Reviews</Link></li>
             <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/add-service'>Add Food Items</Link></li>
             <button className='bg-gray-300 mt-3 p-1 border-5-rose-200' onClick={handleLogOut}>Log out</button>
             </>
@@ -42,7 +42,7 @@ const Header = () => {
                     <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ">
                         <Link className={` 'text-white bg-indigo-200 ' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-4 py-4 font-normal text-sm leading-3 shadow-md rounded`} to='/'><strong>Home</strong></Link>
                         <Link className={` 'text-white bg-indigo-200 ' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-4 py-4 font-normal text-sm leading-3 shadow-md rounded`} to='/services'><strong>Foods</strong></Link>
-                        <Link className={` 'text-white bg-indigo-200 ' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-4 py-4 font-normal text-sm leading-3 shadow-md rounded`} to='/reviews'><strong>Reviews</strong></Link>
+                        <Link className={` 'text-white bg-indigo-200 ' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-4 py-4 font-normal text-sm leading-3 shadow-md rounded`} to='/reviews/:id'><strong>Reviews</strong></Link>
                         <Link className={` 'text-white bg-indigo-200 ' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-4 py-4 font-normal text-sm leading-3 shadow-md rounded`} to='/blog'><strong>Blogs</strong></Link>
                         <Link className={`'text-white bg-indigo-100 ' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-sm leading-3 shadow-md rounded`} >{menuItems}</Link>
                         <Link className={`'text-white bg-indigo-100 ' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-sm leading-3 shadow-md rounded`} href=''>

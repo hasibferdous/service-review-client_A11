@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
 
-const ReviewRow = ({ review, handleDelete }) => {
-    const { _id, placeName, message, ratings, place } = review;
-    const [selectPlace, setSelectPlace] = useState({})
+const ReviewRow = ({ order, handleDelete }) => {
+    const { _id, serviceName, phone, customer, price, service, description } = order;
+    const [orderService, setOrderService] = useState({})
 
     useEffect(() => {
-        fetch(`https://assignment-11-server-liard.vercel.app/places/${place}`)
+        fetch(`https://service-review-server-theta.vercel.app/reviews/${service}`)
             .then(res => res.json())
-            .then(data => setSelectPlace(data))
-    }, [place])
+            .then(data => setOrderService(data));
+    }, [service])
 
-
-
+    
 
     return (
         <tr>
             <th>
                 <label>
-                    <button onClick={() => handleDelete(_id)} className='btn btn-ghost'>X</button>
+                    <button onClick={() => handleDelete(_id)} className='bg-red-100 p-3'>Delete Review</button>
                 </label>
             </th>
             <td>
@@ -25,27 +24,24 @@ const ReviewRow = ({ review, handleDelete }) => {
                     <div className="avatar">
                         <div className="rounded w-24 h-24">
                             {
-                                selectPlace?.img &&
-                                <img src={selectPlace.img} alt="Avatar Tailwind CSS Component" />
-                            }
+                                orderService?.img && 
+                                <img src={orderService.img} alt="Avatar Tailwind CSS Component" />}
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold">{placeName}</div>
-
+                        <div className="font-bold">{customer}</div>
+                        <div className="text-sm opacity-50">{phone}</div>
                     </div>
                 </div>
             </td>
             <td>
-                {ratings}
+                {serviceName}
+                <br />
+                <span className="badge badge-ghost badge-sm">{price}</span>
             </td>
-            <td>{message}</td>
-            <th>
-                <button className="btn btn-ghost btn-xs">details</button>
-            </th>
+            <td>{description}</td>
+ 
         </tr>
-
-
     );
 };
 
