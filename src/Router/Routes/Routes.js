@@ -2,6 +2,7 @@ import { createBrowserRouter} from 'react-router-dom'
 import Main from '../../Layout/Main/Main';
 import Blogs from '../../Pages/Blogs/Blogs';
 import Checkout from '../../Pages/Checkout/Checkout';
+import AddService from '../../Pages/Home/AddService/AddService';
 import Home from '../../Pages/Home/Home/Home';
 import ServiceAll from '../../Pages/Home/Services/ServiceAll';
 import ServiceDetails from '../../Pages/Home/Services/ServiceDetails';
@@ -31,13 +32,18 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
-                path: '/review/:id',
+                path: '/reviews/:id',
                 element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
             },
+
             {
                 path: '/review',
                 element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+            },
+            {
+                path:'/add-service', 
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: '/login',

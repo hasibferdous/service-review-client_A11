@@ -4,26 +4,27 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 
 const Checkout = () => {
-    const { _id, title, price } = useLoaderData();
+    //const { _id, title, price } = useLoaderData();
     const { user } = useContext(AuthContext);
 
     const handlePlaceOrder = event => {
         event.preventDefault();
         const form = event.target;
-        const name = `${form.firstName.value} ${form.lastName.value}`;
+        //const name = `${form.firstName.value} ${form.lastName.value}`;
         
-        const email = user?.email || 'unregistered';
-        const item = form.item.value;
-        const message = form.message.value;
+        //const email = user?.email || 'unregistered';
+        const title = form.title.value;
+        const price = form.price.value;
+        const description = form.description.value;
 
         const order = {
-            service: _id,
-            serviceName: title,
+            // service: _id,
+            title,
             price,
-            customer: name,
-            email,
-            item,
-            message
+            //customer: name,
+            //email,
+            //item,
+            description
         }
 
         // if(phone.length > 10){
@@ -33,7 +34,7 @@ const Checkout = () => {
 
         // }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('http://localhost:5000/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +45,7 @@ const Checkout = () => {
             .then(data => {
                 console.log(data)
                 if(data.acknowledged){
-                    alert('Review added successfully')
+                    alert('Food Added successfully')
                     form.reset();
                     
                 }
@@ -62,10 +63,10 @@ const Checkout = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered mb-3 p-3" />
                     <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full  input-bordered mb-3 p-3" />
-                    <input name="item" type="text" placeholder="Reviewed Food Name" className="input input-ghost w-full  input-bordered mb-3 p-3" required />
-                    <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered mb-3 p-3" readOnly />
+                    <input name="title" type="text" placeholder="Reviewed Food Name" className="input input-ghost w-full  input-bordered mb-3 p-3" required />
+                    {/* <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered mb-3 p-3" readOnly /> */}
                 </div>
-                <textarea name="message" className="textarea textarea-bordered h-24 w-full mb-3 mt-3 p-3" placeholder="Your Reviews" required></textarea>
+                <textarea name="description" className="textarea textarea-bordered h-24 w-full mb-3 mt-3 p-3" placeholder="Your Reviews" required></textarea>
 
                 <input className='bg-indigo-300 rounded p-3' type="submit" value="Submit your review" />
             </form>

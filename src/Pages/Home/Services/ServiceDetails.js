@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import Reviews from '../../Reviews/Reviews';
 
 const ServiceDetails = () => {
     const { _id, img, price, title,description} = useLoaderData()
@@ -34,11 +35,11 @@ const ServiceDetails = () => {
                     <br/><h2 className='text-xl'> Price: <span className='text-center text-xl font-semibold text-red-400'>{price}</span></h2>
                 </div>
                 <div className='mb-5'>
-                    <Link to={`/review/${_id}`}>
+                    <Link to={`/reviews/${_id}`}>
                         <button className="bg-indigo-400 p-1  rounded mt-2 mb-5 text-center ml-11 ">Add Review</button>
                     </Link>
                 </div>
-
+                
             </div>
         </div>
         </div>

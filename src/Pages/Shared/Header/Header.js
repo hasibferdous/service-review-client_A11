@@ -18,7 +18,7 @@ const Header = () => {
             <>
             <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/myorders'>My Orders</Link></li>
             <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/myreviews'>My Reviews</Link></li>
-            <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/addfood'>Add Food Dish</Link></li>
+            <li className='font-semibold my-2 bg-indigo-200 p-1'><Link to='/add-service'>Add Food Items</Link></li>
             <button className='bg-gray-300 mt-3 p-1 border-5-rose-200' onClick={handleLogOut}>Log out</button>
             </>
             :
