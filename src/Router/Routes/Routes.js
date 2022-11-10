@@ -4,6 +4,7 @@ import Blogs from '../../Pages/Blogs/Blogs';
 import Checkout from '../../Pages/Checkout/Checkout';
 import Home from '../../Pages/Home/Home/Home';
 import ServiceAll from '../../Pages/Home/Services/ServiceAll';
+import ServiceDetails from '../../Pages/Home/Services/ServiceDetails';
 import Services from '../../Pages/Home/Services/Services';
 import Login from '../../Pages/Login/Login';
 import Register from '../../Pages/Register/Register';
@@ -22,6 +23,11 @@ import Register from '../../Pages/Register/Register';
                 element: <ServiceAll></ServiceAll>
             },
             {
+                path: '/services/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+            },
+            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -33,11 +39,11 @@ import Register from '../../Pages/Register/Register';
                 path: '/blog',
                 element: <Blogs></Blogs>
             },
-             {
-                 path: '/checkout/:id',
-                 element: <Checkout></Checkout>,
-                 loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
-               },
+            //  {
+            //      path: '/checkout/:id',
+            //      element: <Checkout></Checkout>,
+            //      loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+            //    },
                {
                  path: '/services',
                 element: <Services></Services>
