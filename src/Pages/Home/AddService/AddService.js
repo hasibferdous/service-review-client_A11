@@ -68,7 +68,7 @@ const Checkout = () => {
                    
                     {/* <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered mb-3 p-3" readOnly /> */}
                 </div>
-                <textarea name="description" className="textarea textarea-bordered h-24 w-full mb-3 mt-3 p-3" placeholder="Your Reviews" required></textarea>
+                <textarea name="description" className="textarea textarea-bordered h-24 w-full mb-3 mt-3 p-3" placeholder="Description" required></textarea>
 
                 <input className='bg-indigo-300 rounded p-3' type="submit" value="Submit your review" />
             </form>
