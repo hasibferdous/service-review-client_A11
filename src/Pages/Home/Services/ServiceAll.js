@@ -2,9 +2,9 @@ import React from 'react';
 import ServiceCard from './ServiceCard';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
-const Services = () => {
+
+const ServiceAll = () => {
     const [services, setServices] = useState([]);
     
     useEffect( () =>{
@@ -22,15 +22,14 @@ const Services = () => {
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
                 {
-                    services.slice(3).map(service => <ServiceCard
+                    services.map(service => <ServiceCard
                         key={service._id}
                         service={service}
                     ></ServiceCard>)
                 }
             </div>
-            <Link to='/serviceall'><button class="mb-11 mt-11 ml-11 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600">See All</button></Link>
-        </div>
+             </div>
     );
 };
 
-export default Services;
+export default ServiceAll;

@@ -1,7 +1,9 @@
 import { createBrowserRouter} from 'react-router-dom'
 import Main from '../../Layout/Main/Main';
 import Blogs from '../../Pages/Blogs/Blogs';
+import Checkout from '../../Pages/Checkout/Checkout';
 import Home from '../../Pages/Home/Home/Home';
+import ServiceAll from '../../Pages/Home/Services/ServiceAll';
 import Services from '../../Pages/Home/Services/Services';
 import Login from '../../Pages/Login/Login';
 import Register from '../../Pages/Register/Register';
@@ -16,6 +18,10 @@ import Register from '../../Pages/Register/Register';
                 element: <Home></Home>
             },
             {
+                path: '/serviceall',
+                element: <ServiceAll></ServiceAll>
+            },
+            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -27,15 +33,20 @@ import Register from '../../Pages/Register/Register';
                 path: '/blog',
                 element: <Blogs></Blogs>
             },
-            // {
-            //     path: '/checkout/:id',
-            //     element: <Checkout></Checkout>,
-            //     loader: ({params})=> fetch(`https://car-server-oennndmb9-hasibferdous.vercel.app/services/${params.id}`)
-            //   },
+             {
+                 path: '/checkout/:id',
+                 element: <Checkout></Checkout>,
+                 loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+               },
                {
-                 path: '/foods',
+                 path: '/services',
                 element: <Services></Services>
-               }
+               },
+            //    {
+            //     path: '/servicedetails/:id',
+            //     element: <ServiceDetails></ServiceDetails>,
+            //     loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+            //    }
           ]
 
         }
