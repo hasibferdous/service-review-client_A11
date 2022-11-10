@@ -3,11 +3,11 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 
-const Checkout = () => {
+const Reviews = () => {
     const { _id, title, price } = useLoaderData();
     const { user } = useContext(AuthContext);
 
-    const handlePlaceOrder = event => {
+    const handleReviews = event => {
         event.preventDefault();
         const form = event.target;
         const name = `${form.firstName.value} ${form.lastName.value}`;
@@ -56,7 +56,7 @@ const Checkout = () => {
 
     return (
         <div>
-            <form onSubmit={handlePlaceOrder} className='m-11 p-11 bg-slate-300'>
+            <form onSubmit={handleReviews} className='m-11 p-11 bg-slate-300'>
                 <h2 className="text-4xl text-center mb-8">Add Your Reviews</h2>
              
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
@@ -73,4 +73,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default Reviews;

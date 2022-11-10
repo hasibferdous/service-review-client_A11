@@ -1,25 +1,24 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
-
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Checkout = () => {
-    //const { _id, title, price } = useLoaderData();
+    
     const { user } = useContext(AuthContext);
-
-    const handlePlaceOrder = event => {
+    const handleAdd = event => {
         event.preventDefault();
         const form = event.target;
         //const name = `${form.firstName.value} ${form.lastName.value}`;
         
         //const email = user?.email || 'unregistered';
         const title = form.title.value;
+        const img = form.img.value;
         const price = form.price.value;
         const description = form.description.value;
 
         const order = {
             // service: _id,
             title,
+            img,
             price,
             //customer: name,
             //email,
@@ -57,13 +56,16 @@ const Checkout = () => {
 
     return (
         <div>
-            <form onSubmit={handlePlaceOrder} className='m-11 p-11 bg-slate-300'>
-                <h2 className="text-4xl text-center mb-8">Add Your Reviews</h2>
+            <form onSubmit={handleAdd} className='m-11 p-11 bg-slate-300'>
+                <h2 className="text-4xl text-center mb-8">Add Food Items</h2>
              
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                    <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered mb-3 p-3" />
-                    <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full  input-bordered mb-3 p-3" />
-                    <input name="title" type="text" placeholder="Reviewed Food Name" className="input input-ghost w-full  input-bordered mb-3 p-3" required />
+                    {/* <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered mb-3 p-3" />
+                    <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full  input-bordered mb-3 p-3" /> */}
+                    <input name="title" type="text" placeholder="title" className="input input-ghost w-full  input-bordered mb-3 p-3" required />
+                    <input name="price" type="text" placeholder="price" className="input input-ghost w-full  input-bordered mb-3 p-3" required />
+                    <input name="img" type="text" placeholder="photoURL" className="input input-ghost w-full  input-bordered mb-3 p-3"/>
+                   
                     {/* <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered mb-3 p-3" readOnly /> */}
                 </div>
                 <textarea name="description" className="textarea textarea-bordered h-24 w-full mb-3 mt-3 p-3" placeholder="Your Reviews" required></textarea>
