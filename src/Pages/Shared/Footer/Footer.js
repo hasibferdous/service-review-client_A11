@@ -12,44 +12,33 @@ const Footer = () => {
               <div className="cursor-pointer w-12">
                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_svg1.svg" alt="logo" />
               </div>
-              <p className="w-60 text-xl xl:text-2xl font-semibold leading-normal text-white">The North</p>
+              <p className="w-60 text-xl xl:text-2xl font-semibold leading-normal text-white">Hungry Kitchen</p>
             </div>
             <div className="mt-12 xl:mt-0 grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 w-full md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
               <div className="sm:w-40 md:w-auto xl:w-72 flex justify-start items-start flex-col space-y-6">
                 <h2 className="text-base xl:text-xl font-bold xl:font-semibold leading-4 xl:leading-5 text-white">Community</h2>
                 <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  About Us
+                  About
                 </button>
                 <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  Guidelines and how to
+                  Guidelines
                 </button>
                 <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  Quote from the best
-                </button>
-                <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  How to start a blog
+                  Start a blog
                 </button>
               </div>
               <div className="sm:w-40 md:w-auto xl:w-72 flex justify-start items-start flex-col space-y-6">
                 <h2 className="text-base xl:text-xl font-bold xl:font-semibold leading-4 xl:leading-5 text-white">Getting Started</h2>
                 <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  About Us
+                  About
                 </button>
                 <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  Guidelines and how to
-                </button>
-                <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  Quote from the best
-                </button>
-                <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  How to start a blog
+                  Gallery
                 </button>
                 <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
                   Quote from the best
                 </button>
-                <button className="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                  Guidelines and how to
-                </button>
+
               </div>
               <div className=" xl:w-72 flex justify-start items-start flex-col space-y-6">
                 <h2 className="text-base xl:text-xl font-bold xl:font-semibold leading-4 xl:leading-5 text-white">Resources</h2>
@@ -60,19 +49,14 @@ const Footer = () => {
                   Usability
                 </button>
                 <button className="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                  Marketplace
+                  Design 
                 </button>
-                <button className="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                  Design &amp; Dev
-                </button>
-                <button className="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                  Marketplace
-                </button>
+
               </div>
             </div>
           </div>
           <div className="mt-12 flex  xl:justify-between xl:flex-row flex-col-reverse items-center xl:items-start w-full ">
-            <p className="mt-10 md:mt-12 xl:mt-0 text-sm leading-none text-white">2020 The Good Company. All Rights Reserved</p>
+            <p className="mt-10 md:mt-12 xl:mt-0 text-sm leading-none text-white">2022 The Hungry Kitchen. All Rights Reserved</p>
             <div className="mt-10 md:mt-12 xl:mt-0 md:flex-row flex-col flex md:justify-center w-full md:w-auto justify-start items-start space-y-4 md:space-y-0 md:items-center md:space-x-4 xl:space-x-6">
               <button className="text-base leading-none text-white hover:text-gray-300">
                 Terms of service
