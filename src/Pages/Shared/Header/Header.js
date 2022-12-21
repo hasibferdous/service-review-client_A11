@@ -28,7 +28,7 @@ const Header = () => {
     return (
         <div className="2xl:container 2xl:mx-auto">
             <div className="bg-indigo-300 rounded shadow-lg py-5 px-7">
-                <nav className="flex justify-between">
+                <nav className="lg:flex lg:justify-between">
                     <div className="flex items-center space-x-3 lg:pr-16 pr-6">
                     <img
                     src="https://cdn-icons-png.flaticon.com/512/121/121046.png"

@@ -3,8 +3,8 @@ import './Blogs.css'
 const Blogs = () => {
 
     return (
-        <div className='m-11 px-11 py-11 bg-slate-300'>
-        <div className='blog mt-5 ms-4'>
+        <div className='lg:m-11 lg:px-11 py-11 bg-slate-300'>
+        <div className='blog mt-5 lg:ms-4'>
         <h3><u>Questions & Answers</u></h3>
 
 <h5><b>a. Difference between SQL and NoSQL?</b></h5>

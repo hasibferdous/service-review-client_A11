@@ -13,7 +13,7 @@ const ServiceDetails = () => {
             <div className="my-9 py-3 px-3 card card-compact w-3/4 mx-auto bg-base-100 shadow-xl m-4 bg-red-100">
             <PhotoProvider>
             <PhotoView src={img}>
-            <figure><img src={img} className='ml-11 pl-5 pt-11' alt="foods" /></figure>
+            <figure><img src={img} className='lg:ml-11 lg:pl-5 pt-11' alt="foods" /></figure>
             </PhotoView>
             </PhotoProvider>
             <div className="ml-2 p-2">
@@ -29,7 +29,7 @@ const ServiceDetails = () => {
             
         </div>
             <div className=' bg-red-100 w-3/4 mx-auto rounded mb-11 mt-11'>
-                <h2 className='text-center text-4xl mb-3 pt-5'>Reviews</h2>
+                <h2 className='text-center text-4xl mb-3 pt-5'>Review Section</h2>
                 <div className='w-3/4 mx-auto grid lg:grid-cols-2 justify-between '>
                     <h2 className='text-xl'> Food Item: <span className='text-center text-xl font-semibold text-red-400'>{title}</span></h2>
                     <br/><h2 className='text-xl'> Price: <span className='text-center text-xl font-semibold text-red-400'>{price}</span></h2>
